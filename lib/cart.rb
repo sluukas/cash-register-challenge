@@ -1,4 +1,3 @@
-class Cart
 
   def add_to_cart(cart, product)
     cart << product
@@ -14,4 +13,11 @@ class Cart
     formatted_items.join(', ')
   end
 
-end
+
+  def cart_total_price(cart)
+    total = 0
+    cart.each do |cart_item|
+      total += store_items[cart_item][:price] if store_items.key?(cart_item)
+    end
+    total
+  end
