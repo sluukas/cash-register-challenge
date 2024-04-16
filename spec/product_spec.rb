@@ -14,8 +14,6 @@ RSpec.describe Product do
 
   describe "#store_items_to_s" do
     it "returns a string representation of store items" do
-      # Your test code here
     end
   end
 end
-

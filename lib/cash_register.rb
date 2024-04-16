@@ -17,18 +17,16 @@ class CashRegister
       break if product == ''
 
       if Product.product_in_store?(product)
-        Cart.add_to_cart(cart, product)  # Corrected to use method from Cart module
+        Cart.add_to_cart(cart, product)
       else
-        # otherwise show error
         puts "We don't have any #{product} in store, sorry!"
       end
     end
 
-    # Display content of basket & total price
     puts 'Here is your order:'
-    puts Cart.cart_to_s(cart)  # Corrected to use method from Cart module
+    puts Cart.cart_to_s(cart)
 
-    total = Cart.cart_total_price(cart)  # Corrected to use method from Cart module
+    total = Cart.cart_total_price(cart)
     puts "Total price: #{total}€"
   end
 end

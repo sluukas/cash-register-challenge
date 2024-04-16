@@ -28,19 +28,19 @@ RSpec.describe Cart do
     it 'applies buy-one-get-one-free offer for Green Tea (GR1)' do
       cart = ['GR1', 'GR1']
       total_price = Cart.cart_total_price(cart)
-      expect(total_price).to eq(3.11) # One of the Green Tea should be free
+      expect(total_price).to eq(3.11)
     end
 
     it 'applies special pricing for Strawberries (SR1)' do
       cart = ['SR1', 'SR1', 'SR1']
       total_price = Cart.cart_total_price(cart)
-      expect(total_price).to eq(13.50) # Special pricing applied for 3 Strawberries
+      expect(total_price).to eq(13.50)
     end
 
     it 'applies special pricing for Coffee (CF1)' do
       cart = ['CF1', 'CF1', 'CF1']
       total_price = Cart.cart_total_price(cart)
-      expect(total_price).to eq(22.46) # Special pricing applied for 3 Coffees
+      expect(total_price).to eq(22.46)
     end
   end
 

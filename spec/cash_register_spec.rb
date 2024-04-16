@@ -7,7 +7,7 @@ RSpec.describe "CashRegister" do
     let(:cart) { [] }
 
     before do
-      allow_any_instance_of(Object).to receive(:puts) # suppress output during tests
+      allow_any_instance_of(Object).to receive(:puts) 
     end
 
     it "adds product to cart when valid product code is entered" do
@@ -31,4 +31,3 @@ RSpec.describe "CashRegister" do
     end
   end
 end
-
